@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+crazyrouter/__init__.py
+crazyrouter.egg-info/PKG-INFO
+crazyrouter.egg-info/SOURCES.txt
+crazyrouter.egg-info/dependency_links.txt
+crazyrouter.egg-info/requires.txt
+crazyrouter.egg-info/top_level.txt
