@@ -1,6 +1,6 @@
 # Crazyrouter Python SDK
 
-**One API key for 300+ AI models.** Drop-in replacement for the OpenAI Python SDK.
+An OpenAI SDK wrapper that defaults to `https://crazyrouter.com/v1`.
 
 [![PyPI version](https://badge.fury.io/py/crazyrouter.svg)](https://pypi.org/project/crazyrouter/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -24,7 +24,7 @@ response = client.chat.completions.create(
     messages=[{"role": "user", "content": "Explain quantum computing"}]
 )
 
-# Claude Opus 4.6 — same API, just change the model name
+# Claude Opus 4.6 — Chat Completions-compatible text example
 response = client.chat.completions.create(
     model="claude-opus-4-6",
     messages=[{"role": "user", "content": "Explain quantum computing"}]
@@ -40,7 +40,7 @@ response = client.chat.completions.create(
 - client = OpenAI(api_key="sk-openai-xxx")
 + client = Crazyrouter(api_key="sk-crazyrouter-xxx")
 
-# Everything else stays the same!
+# Verify the model ID, endpoint and supported parameters before migrating.
 ```
 
 ## Links
@@ -53,3 +53,7 @@ response = client.chat.completions.create(
 ## License
 
 MIT © [Crazyrouter](https://crazyrouter.com)
+
+## Version and billing scope
+
+The wrapper uses the OpenAI SDK version range declared in the package manifest. It does not promise that all features of newer SDK versions are available. Check [current prices](https://crazyrouter.com/en/pricing); there is no universal discount.
